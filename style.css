@@ -13,7 +13,7 @@ body{
 .social{
     display: inline-flex;
     align-items: center;
-    margin: 2px;
+    margin: 1px;
 }
 
 section{
@@ -38,6 +38,7 @@ section{
     font-family: ubuntu, sans-serif;
     margin-bottom: 6%;
     margin-top: 2px;
+    color: rgb(56, 245, 159);
 }
 
 .text{
@@ -75,7 +76,7 @@ section{
 .cabecalhoText{
     flex: 1; /*faz o texto ocupar o espaço disponivel*/
     text-align: left; /*alinha o texto a esquerda */
-    max-width: 40%;
+    max-width: 42%;
 }
 
 .cabecalhoFoto{
@@ -158,9 +159,7 @@ section{
         width: 95%;
         height: 50%;
     }
-    .nome{
-        font-size: 1.53em;
-    }
+
     .cards{
         width: auto;
         height: 60%;
