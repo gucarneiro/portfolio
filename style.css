@@ -1,18 +1,118 @@
-/* .telaInicial{
-    background-color: rgb(180, 208, 233);
-} */
+body{
+    background-color: #eff2f5;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.pag{
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
 
 .nome{
-    text-align: center;
+    text-align: left;
     color: rgb(31, 41, 76);
     font-size: 2em;
     font-family: ubuntu, sans-serif;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+.text{
+    font-family: ubuntu, sans-serif;
+    font-size: 1.3em;
+    /* margin: auto; */
 }
 
 .desc{
-    text-align: center;
     color: rgb(31, 41, 76);
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: 'VT323', monospace;
     font-weight: bold;
+}
+
+.fotoPerfil{
+    border-radius: 50%;
+    width: 270PX;
+    border: 1.5px solid, black;
+    margin: 30px;
+    justify-content: right;
+    display: block;
+}
+
+.cabecalho {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;   
+    margin: auto;
+    gap: 40px; /*espaço entre o txt e foto*/
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cabecalhoText{
+    flex: 1; /*faz o texto ocupar o espaço disponivel*/
+    text-align: left; /*alinha o texto a esquerda */
+    max-width: 40%;
+}
+
+.cabecalhoFoto{
+    flex-shrink: 0; /*impede a foto de diminuir*/
+    position: sticky;
+    align-self: flex-start;
+}
+
+.logo{
+    width: 20px;
+    height:20px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+.imagemProj{
+    width: 270px;
+    height: 400px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 15px;
+}
+
+.rodape{
+    margin-top: 2%;
+}
+
+.janela{
+    width: 80%;
+    overflow: hidden;
+    overflow-x: auto;
+    align-items: center;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.trilho{
+    max-width: 10000px;
+    display: flex;
+    gap: 20px;
+    padding-top: 0;
+    height: 480px   ;
+    width: 1000px;
+}
+
+.cards{
+    width: 270px;
+    height: auto;
+    margin: 15px;
+    padding: auto;
+    border: 2px solid, black;
 }
