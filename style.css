@@ -116,3 +116,44 @@ section{
     padding: auto;
     border: 2px solid, black;
 }
+
+@media screen and (max-width: 768px) {
+    .cabecalho{
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        justify-content: center;
+        position: static;
+        display: flex;
+    }
+    .cabecalhoFoto{
+        align-self: center;
+        position: static;
+    }
+    .cabecalhoText{
+        max-width: 100%;
+    }
+    .fotoPerfil{
+        width: 180px;
+        margin: 0px auto;
+        display: block;
+        justify-content: center;
+    }
+    .janela{
+        width: 95%;
+        height: 50%;
+    }
+    .nome{
+        font-size: 1.53em;
+    }
+    .cards{
+        width: auto;
+        height: 60%;
+    }
+    .imagemProj{
+        width: 200px;
+        height: 230px;
+    }
+}
