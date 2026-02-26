@@ -32,36 +32,6 @@ section{
     scroll-behavior: smooth;
 }
 
-.nome{
-    text-align: left;
-    font-size: 2.5em;
-    font-family: ubuntu, sans-serif;
-    margin-bottom: 6%;
-    margin-top: 2px;
-    color: rgb(56, 245, 159);
-}
-
-.text{
-    font-family: ubuntu, sans-serif;
-    font-size: 1.3em;
-    color: rgb(56, 245, 159);
-    text-decoration: none;
-}
-
-.desc{
-    font-size: 1.1em;
-    font-family: 'VT323', monospace;
-    font-weight: bold;
-}
-
-.fotoPerfil{
-    border-radius: 50%;
-    width: 270PX;
-    margin: 30px;
-    justify-content: right;
-    display: block;
-}
-
 .cabecalho {
     justify-content: space-between;
     display: flex;
@@ -77,6 +47,49 @@ section{
     flex: 1; /*faz o texto ocupar o espaço disponivel*/
     text-align: left; /*alinha o texto a esquerda */
     max-width: 42%;
+}
+
+.nome{
+    text-align: left;
+    font-size: 2.5em;
+    font-family: ubuntu, sans-serif;
+    margin-bottom: 6%;
+    margin-top: 2px;
+    color: rgb(56, 245, 159);
+}
+
+.redes{
+    font-size: 0.9em;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    margin-bottom: 7%;
+    }
+    .titulo{
+    font-size: 1.4em;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    text-align: left; 
+    color: rgb(56, 245, 159); 
+    font-weight: bold; 
+    margin-bottom: 0;
+    }
+    .text{
+    font-family: ubuntu, sans-serif;
+    font-size: 1.3em;
+    color: rgb(56, 245, 159);
+    text-decoration: none;
+    }
+
+    .desc{
+    font-size: 1.1em;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    }
+
+.fotoPerfil{
+    width: 350px;
+    justify-content: right;
+    display: block;
 }
 
 .cabecalhoFoto{
@@ -150,7 +163,7 @@ section{
         max-width: 100%;
     }
     .fotoPerfil{
-        width: 180px;
+        width: 80%;
         margin: 0px auto;
         display: block;
         justify-content: center;
@@ -176,5 +189,33 @@ section{
     .rodape{
     margin-top: 2%;
     width: 100%;
+}
+    .nome{
+        text-align: left;
+        font-size: 6.7vw;
+        font-family: ubuntu, sans-serif;
+        margin-bottom: 6%;
+        margin-top: 2px;
+        color: rgb(56, 245, 159);
+    }
+    .desc{
+    font-size: 4vw;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    }
+    .redes{
+    font-size: 4vw;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    margin-bottom: 7%;
+    }
+    .titulo{
+    font-size: 5.8vw;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    text-align: left; 
+    color: rgb(56, 245, 159); 
+    font-weight: bold; 
+    margin-bottom: 0;
 }
 }
