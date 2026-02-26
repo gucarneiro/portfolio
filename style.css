@@ -1,7 +1,61 @@
-body{
-    background-color: #313030;
+/* 1. RESET UNIVERSAL (Essencial para evitar quebras de layout) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho dos elementos */
+}
+
+/* 2. LIMPEZA DO HTML/BODY */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Remove a barra de rolagem do "fundo" da página */
     color: #ffffff;
     background: radial-gradient(circle at top left, #213834, #313030);
+}
+
+/* 3. AJUSTE NA CLASSE .PAG */
+.pag {
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto; /* Só mostra barra vertical se o conteúdo transbordar */
+    overflow-x: hidden; /* Garante que nada escape para os lados */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* 4. AJUSTE NO TRILHO DE PROJETOS */
+.janela {
+    width: 90%; /* Ajustado para dar um respiro nas bordas */
+    overflow-x: auto; /* Aqui a rolagem horizontal é permitida e desejada */
+    margin: 20px auto;
+}
+
+.janela::-webkit-scrollbar {
+    height: 8px;
+}
+.janela::-webkit-scrollbar-thumb {
+    background: rgb(56, 245, 159);
+    border-radius: 10px;
+}
+
+.trilho {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* O trilho terá exatamente o tamanho da soma dos cards */
+    padding: 10px;
+    height: auto; /* Deixe o conteúdo definir a altura */
+}
+
+/* 5. AJUSTE NAS SECTIONS */
+section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; /* Reduzi um pouco para telas menores */
 }
 
 #apresentacao{
@@ -16,21 +70,6 @@ body{
     margin: 1px;
 }
 
-section{
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px;
-}
-
-.pag{
-    height: 100vh;
-    overflow: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
 
 .cabecalho {
     justify-content: space-between;
@@ -59,7 +98,7 @@ section{
 }
 
 .redes{
-    font-size: 0.9em;
+    font-size: 1em;
     font-family: 'VT323', monospace;
     font-weight: bold;
     margin-bottom: 7%;
@@ -100,7 +139,7 @@ section{
 
 .logo{
     width: 20px;
-    height:20px;
+    height: auto;
     margin-left: 1px;
     margin-top: 0;
 }
@@ -111,6 +150,7 @@ section{
     margin-top: 0;
     margin-bottom: 0;
     margin-bottom: 15px;
+    border-radius: 5%;
 }
 
 .rodape{
@@ -118,30 +158,18 @@ section{
     width: 60%;
 }
 
-.janela{
-    width: 80%;
-    overflow: hidden;
-    overflow-x: auto;
-    align-items: center;
-    margin: auto;
-    margin-top: 3%;
-}
-
-.trilho{
-    max-width: 10000px;
-    display: flex;
-    gap: 20px;
-    padding-top: 0;
-    height: 480px   ;
-    width: 1000px;
-}
-
 .cards{
-    width: 270px;
+    width: 272px;
     height: auto;
     margin: 15px;
     padding: auto;
     border: 2px solid,  rgb(56, 245, 159);
+    transition: 0.3s ease;
+    border-radius: 5%;
+}
+.cards:hover {
+    border-color: rgb(56, 245, 159);
+    transform: translateY(-5px);
 }
 
 @media screen and (max-width: 768px) {
@@ -170,16 +198,31 @@ section{
     }
     .janela{
         width: 95%;
-        height: 50%;
+        height: 55%;
     }
 
-    .cards{
+    .trilho{
+        height: 300px;
         width: auto;
-        height: 60%;
     }
+
+.cards{
+    width: 272px;
+    height: 230px;
+    margin: 15px;
+    padding: auto;
+    border: 2px solid,  rgb(56, 245, 159);
+    transition: 0.3s ease;
+}
+.cards:hover {
+    border-color: rgb(56, 245, 159);
+    transform: translateY(-5px);
+}
+
     .imagemProj{
         width: 200px;
         height: 230px;
+        border-radius: 5%;
     }
     .social{
     display: block;
@@ -204,7 +247,7 @@ section{
     font-weight: bold;
     }
     .redes{
-    font-size: 4vw;
+    font-size: 4.5vw;
     font-family: 'VT323', monospace;
     font-weight: bold;
     margin-bottom: 7%;
