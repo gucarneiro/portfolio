@@ -258,7 +258,7 @@ section {
 }
 
     .imagemProj{
-        width: 200px;
+        width: 170px;
         height: 230px;
         border-radius: 5%;
         border: 2px solid,  #ffffff;
@@ -271,6 +271,7 @@ section {
     .rodape{
     margin-top: 2%;
     width: 100%;
+    margin-left: 0;
 }
     .nome{
         text-align: left;
