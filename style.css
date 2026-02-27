@@ -24,6 +24,38 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* alteração no scroll do mouse */
+.pag {
+    scrollbar-width: thin; /* Deixa o scroll mais fininho */
+    scrollbar-color: rgb(56, 245, 159) #213834; /* Cor da "pecinha" e do fundo */
+}
+
+/* 2. Estilo específico para Chrome, Safari e Edge (Webkit) */
+/* Aqui você consegue arredondar e dar efeitos melhores */
+
+/* Onde o scroll acontece (no seu caso, na div .pag) */
+.pag::-webkit-scrollbar {
+    width: 10px;               /* Largura da barra vertical */
+    height: 10px;              /* Altura da barra horizontal */
+}
+
+/* Fundo da barra (o trilho) */
+.pag::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+/* A barra que se move (o "polegar") */
+.pag::-webkit-scrollbar-thumb {
+    background-color: rgb(56, 245, 159); /* Seu verde principal */
+    border-radius: 10px;       /* Deixa arredondado */
+}
+
+/* Efeito ao passar o mouse */
+.pag::-webkit-scrollbar-thumb:hover {
+    background-color: #2ed18a; /* Um verde um pouco mais escuro no hover */
+}
+
 /* 4. AJUSTE NO TRILHO DE PROJETOS */
 .janela {
     width: 90%; /* Ajustado para dar um respiro nas bordas */
@@ -64,10 +96,18 @@ section {
     background: radial-gradient(circle at top right, #213834, #313030);
 }
 
+#sobre{
+    background-color: #313030;
+    color: #ffffff;
+    background: radial-gradient(circle at top right, #213834, #313030);
+}
+
 .social{
     display: inline-flex;
     align-items: center;
     margin: 1px;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 
@@ -102,7 +142,8 @@ section {
     font-family: 'VT323', monospace;
     font-weight: bold;
     margin-bottom: 7%;
-    }
+}
+
     .titulo{
     font-size: 1.4em;
     font-family: 'VT323', monospace;
@@ -115,7 +156,7 @@ section {
     .text{
     font-family: ubuntu, sans-serif;
     font-size: 1.3em;
-    color: rgb(56, 245, 159);
+    color: #ffffff;
     text-decoration: none;
     }
 
@@ -148,14 +189,15 @@ section {
     width: 270px;
     height: 400px;
     margin-top: 0;
-    margin-bottom: 0;
     margin-bottom: 15px;
     border-radius: 5%;
+    border: 2px solid,  #ffffff;
 }
 
 .rodape{
     margin-top: 2%;
     width: 60%;
+    margin-left: 5%;
 }
 
 .cards{
@@ -163,12 +205,10 @@ section {
     height: auto;
     margin: 15px;
     padding: auto;
-    border: 2px solid,  rgb(56, 245, 159);
     transition: 0.3s ease;
     border-radius: 5%;
 }
 .cards:hover {
-    border-color: rgb(56, 245, 159);
     transform: translateY(-5px);
 }
 
@@ -211,11 +251,9 @@ section {
     height: 230px;
     margin: 15px;
     padding: auto;
-    border: 2px solid,  rgb(56, 245, 159);
     transition: 0.3s ease;
 }
 .cards:hover {
-    border-color: rgb(56, 245, 159);
     transform: translateY(-5px);
 }
 
@@ -223,6 +261,7 @@ section {
         width: 200px;
         height: 230px;
         border-radius: 5%;
+        border: 2px solid,  #ffffff;
     }
     .social{
     display: block;
